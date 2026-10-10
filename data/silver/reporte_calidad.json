@@ -1,0 +1,26 @@
+{
+    "archivo_origen": "data/bronze/telemetria.csv",
+    "archivo_silver": "data/silver\\telemetria_limpia.csv",
+    "filas_leidas": 4000000,
+    "rechazadas_por_datos_faltantes": 81318,
+    "rechazadas_por_rango_fisico": 81169,
+    "rechazadas_por_duplicados": 76707,
+    "filas_validas": 3760806,
+    "filas_rechazadas_totales": 239194,
+    "porcentaje_datos_validos": 94.0202,
+    "porcentaje_datos_rechazados": 5.9798,
+    "limites_aplicados": {
+        "p_ac_kw": [
+            0,
+            5
+        ],
+        "irradiancia_wm2": [
+            0,
+            1000
+        ],
+        "temp_modulo_c": [
+            -40,
+            100
+        ]
+    }
+}
