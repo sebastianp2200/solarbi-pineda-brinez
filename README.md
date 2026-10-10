@@ -16,6 +16,14 @@ de inversores solares, con carga en PostgreSQL y tableros en Power BI y Grafana.
 5. Ejecutar el ETL: `python etl/run_etl.py`
 6. Importar `grafana/dashboard_energia_solar.json` en Grafana y abrir `powerbi/*.pbix`.
 
+## Arquitectura
+
+| Capa | Contenido | Ubicación |
+| --- | --- | --- |
+| Bronze | CSV crudo de telemetría (4.000.000 de filas) | `data/bronze/` |
+| Silver | Datos validados (faltantes, rangos y duplicados) | `data/silver/` y tabla `silver.lectura_5min` |
+| Gold | Energía diaria por dispositivo | tabla `dwh.fact_energia_dia` |
+
 ## Programación diaria
 Cron: `0 0 * * * cd /ruta/proyecto && python etl/run_etl.py`
 
